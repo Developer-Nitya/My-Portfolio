@@ -1,0 +1,523 @@
+/* ================================================================
+   CUSTOM CSS — Modern, Professional Portfolio
+   Nityananda Mandal — v3.0
+   ================================================================ */
+
+/* ---- GLOBAL BASE ---- */
+html { scroll-behavior: smooth; }
+
+body {
+  padding: 0 !important;
+  font-family: Poppins, sans-serif !important;
+}
+
+/* ================================================================
+   NAVBAR
+   ================================================================ */
+.navbar {
+  transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease !important;
+}
+.navbar.scrolled {
+  background: rgba(10, 10, 10, 0.97) !important;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.7) !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+
+/* Nav link animated underline */
+.navbar .navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.3s ease !important;
+}
+.navbar .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #019963;
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navbar .navbar-nav .nav-link:hover::after,
+.navbar .navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* ================================================================
+   HOME SECTION — Entry animations
+   ================================================================ */
+
+/* Gradient text for name */
+.home-area .home-name {
+  background: linear-gradient(135deg, #ffffff 20%, #a8ffd9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: homeSlideUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.3s;
+}
+
+.home-area .home-headline {
+  animation: homeSlideUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.6s;
+}
+
+.fixed-block.block-left  { animation: homeFadeIn 1s ease both; animation-delay: 1s;  }
+.fixed-block.block-right { animation: homeFadeIn 1s ease both; animation-delay: 1.2s; }
+
+@keyframes homeSlideUp {
+  from { opacity: 0; transform: translateY(55px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes homeFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ================================================================
+   LANGUAGE SWITCHER
+   ================================================================ */
+.home-area .fixed-wrapper .languages-list .single-language {
+  transform: none !important;
+  -webkit-transform: none !important;
+  display: inline-block !important;
+  margin-top: 0 !important;
+}
+
+.languages-list li {
+  margin-bottom: 8px;
+}
+
+.lang-btn {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 22px;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  background: transparent !important;
+  cursor: pointer;
+}
+.lang-btn:hover {
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+.lang-btn.lang-active {
+  color: #019963 !important;
+  border-color: #019963 !important;
+  background: rgba(1, 153, 99, 0.12) !important;
+  box-shadow: 0 0 8px rgba(1, 153, 99, 0.25);
+}
+
+/* Social icons hover */
+.social-icons a,
+.content-follow .list-inline-item a {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease !important;
+}
+.social-icons a:hover,
+.content-follow .list-inline-item a:hover {
+  transform: translateY(-5px) scale(1.15);
+}
+
+/* ================================================================
+   SERVICE CARDS — Equal height fix + modern design
+   ================================================================ */
+
+/* Grid rows stretch to match tallest card */
+.services-grid {
+  align-items: stretch !important;
+}
+
+/* Each card is a flex column so the button always pins to the bottom */
+.service-card {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background: linear-gradient(160deg, #1c1c1c 0%, #141414 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  border-radius: 10px !important;
+  transition: transform 0.35s ease,
+              box-shadow 0.35s ease,
+              border-color 0.35s ease !important;
+}
+
+/* Inner content grows to fill all space, pushing button down */
+.service-card .service-grid-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.service-card .service-grid-item > p.service-item-paragraph {
+  flex: 1;
+}
+
+/* Button always at bottom — override ALL inline margin-top values */
+.service-card > .go-contact-btn {
+  margin-top: auto !important;
+  width: 100% !important;
+  border-radius: 6px !important;
+  padding: 11px 18px !important;
+  font-size: 0.86rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.4px;
+  font-family: Poppins, sans-serif !important;
+}
+
+/* Hover state — lift + accent glow */
+.service-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45),
+              0 0 0 1px rgba(1, 153, 99, 0.28) !important;
+  border-color: rgba(1, 153, 99, 0.22) !important;
+}
+
+/* Accent bottom bar on hover */
+.service-card::after {
+  content: '';
+  position: absolute !important;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #019963, #00d4a4);
+  border-radius: 0 0 10px 10px;
+  transition: width 0.4s ease;
+}
+.service-card:hover::after {
+  width: 100%;
+}
+
+/* Service card image */
+.service-item-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              filter 0.4s ease !important;
+  filter: drop-shadow(0 4px 10px rgba(1, 153, 99, 0.15));
+}
+.service-card:hover .service-item-img {
+  transform: scale(1.14) translateY(-5px) !important;
+  filter: drop-shadow(0 8px 18px rgba(1, 153, 99, 0.38));
+}
+
+/* Services header */
+.services-header h1 {
+  line-height: 1.3;
+}
+
+/* CTA buttons */
+@keyframes ctaPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(1, 153, 99, 0.55); }
+  70%  { box-shadow: 0 0 0 14px rgba(1, 153, 99, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(1, 153, 99, 0); }
+}
+#cta-primary {
+  animation: ctaPulse 2.5s infinite;
+}
+
+/* ================================================================
+   SECTION OPEN ANIMATIONS
+   .section-opened is added by custom.js ~1s after nav click
+   (after the overlay sweep completes)
+   ================================================================ */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes growBar {
+  from { width: 0; opacity: 0; }
+  to   { width: 60px; opacity: 1; }
+}
+
+/* Headings */
+.section-opened .section-heading  { animation: fadeInUp 0.65s ease both; }
+.section-opened .animated-bar     { animation: growBar 0.8s ease both; animation-delay: 0.35s; }
+
+/* — ABOUT — */
+.section-opened .info-img          { animation: fadeInLeft  0.7s ease both; animation-delay: 0.15s; }
+.section-opened .info-content      { animation: fadeInRight 0.7s ease both; animation-delay: 0.25s; }
+.section-opened .services-header   { animation: fadeInUp    0.6s ease both; animation-delay: 0.1s;  }
+.section-opened .cta-bottom        { animation: fadeInUp    0.6s ease both; animation-delay: 0.55s; }
+
+/* Service cards — staggered per child */
+.section-opened .service-card:nth-child(1)  { animation: scaleIn 0.45s ease both; animation-delay: 0.05s; }
+.section-opened .service-card:nth-child(2)  { animation: scaleIn 0.45s ease both; animation-delay: 0.10s; }
+.section-opened .service-card:nth-child(3)  { animation: scaleIn 0.45s ease both; animation-delay: 0.15s; }
+.section-opened .service-card:nth-child(4)  { animation: scaleIn 0.45s ease both; animation-delay: 0.20s; }
+.section-opened .service-card:nth-child(5)  { animation: scaleIn 0.45s ease both; animation-delay: 0.25s; }
+.section-opened .service-card:nth-child(6)  { animation: scaleIn 0.45s ease both; animation-delay: 0.30s; }
+.section-opened .service-card:nth-child(7)  { animation: scaleIn 0.45s ease both; animation-delay: 0.35s; }
+.section-opened .service-card:nth-child(8)  { animation: scaleIn 0.45s ease both; animation-delay: 0.40s; }
+
+/* Testimonials */
+.section-opened .single-review { animation: scaleIn 0.6s ease both; animation-delay: 0.3s; }
+
+/* — RESUME — */
+.section-opened .education  .resume-item:nth-child(1) { animation: fadeInLeft  0.5s ease both; animation-delay: 0.10s; }
+.section-opened .education  .resume-item:nth-child(2) { animation: fadeInLeft  0.5s ease both; animation-delay: 0.20s; }
+.section-opened .education  .resume-item:nth-child(3) { animation: fadeInLeft  0.5s ease both; animation-delay: 0.30s; }
+.section-opened .education  .resume-item:nth-child(4) { animation: fadeInLeft  0.5s ease both; animation-delay: 0.40s; }
+.section-opened .experience .resume-item:nth-child(1) { animation: fadeInRight 0.5s ease both; animation-delay: 0.10s; }
+.section-opened .experience .resume-item:nth-child(2) { animation: fadeInRight 0.5s ease both; animation-delay: 0.20s; }
+.section-opened .experience .resume-item:nth-child(3) { animation: fadeInRight 0.5s ease both; animation-delay: 0.30s; }
+
+.section-opened .single-skill:nth-child(1) { animation: fadeInUp 0.5s ease both; animation-delay: 0.10s; }
+.section-opened .single-skill:nth-child(2) { animation: fadeInUp 0.5s ease both; animation-delay: 0.20s; }
+.section-opened .single-skill:nth-child(3) { animation: fadeInUp 0.5s ease both; animation-delay: 0.30s; }
+
+/* — PORTFOLIO — */
+.section-opened .single-item:nth-child(1)  { animation: scaleIn 0.4s ease both; animation-delay: 0.05s; }
+.section-opened .single-item:nth-child(2)  { animation: scaleIn 0.4s ease both; animation-delay: 0.10s; }
+.section-opened .single-item:nth-child(3)  { animation: scaleIn 0.4s ease both; animation-delay: 0.15s; }
+.section-opened .single-item:nth-child(4)  { animation: scaleIn 0.4s ease both; animation-delay: 0.20s; }
+.section-opened .single-item:nth-child(5)  { animation: scaleIn 0.4s ease both; animation-delay: 0.25s; }
+.section-opened .single-item:nth-child(6)  { animation: scaleIn 0.4s ease both; animation-delay: 0.30s; }
+.section-opened .single-item:nth-child(7)  { animation: scaleIn 0.4s ease both; animation-delay: 0.35s; }
+.section-opened .single-item:nth-child(8)  { animation: scaleIn 0.4s ease both; animation-delay: 0.40s; }
+.section-opened .single-item:nth-child(9)  { animation: scaleIn 0.4s ease both; animation-delay: 0.45s; }
+.section-opened .single-item:nth-child(10) { animation: scaleIn 0.4s ease both; animation-delay: 0.50s; }
+.section-opened .single-item:nth-child(11) { animation: scaleIn 0.4s ease both; animation-delay: 0.55s; }
+
+/* — BLOG — */
+.section-opened .col-12.col-sm-8.col-lg-4:nth-child(1) { animation: fadeInUp 0.5s ease both; animation-delay: 0.10s; }
+.section-opened .col-12.col-sm-8.col-lg-4:nth-child(2) { animation: fadeInUp 0.5s ease both; animation-delay: 0.16s; }
+.section-opened .col-12.col-sm-8.col-lg-4:nth-child(3) { animation: fadeInUp 0.5s ease both; animation-delay: 0.22s; }
+.section-opened .col-12.col-sm-8.col-lg-4:nth-child(4) { animation: fadeInUp 0.5s ease both; animation-delay: 0.28s; }
+.section-opened .col-12.col-sm-8.col-lg-4:nth-child(5) { animation: fadeInUp 0.5s ease both; animation-delay: 0.34s; }
+.section-opened .col-12.col-sm-8.col-lg-4:nth-child(6) { animation: fadeInUp 0.5s ease both; animation-delay: 0.40s; }
+
+/* — CONTACT — */
+.section-opened .contact-form   { animation: fadeInLeft  0.6s ease both; animation-delay: 0.15s; }
+.section-opened .contact-info   { animation: fadeInRight 0.6s ease both; animation-delay: 0.25s; }
+.section-opened .list-info li:nth-child(1) { animation: fadeInUp 0.5s ease both; animation-delay: 0.35s; }
+.section-opened .list-info li:nth-child(2) { animation: fadeInUp 0.5s ease both; animation-delay: 0.45s; }
+.section-opened .list-info li:nth-child(3) { animation: fadeInUp 0.5s ease both; animation-delay: 0.55s; }
+.section-opened .list-info li:nth-child(4) { animation: fadeInUp 0.5s ease both; animation-delay: 0.65s; }
+
+/* ================================================================
+   HOVER ENHANCEMENTS
+   ================================================================ */
+
+/* About picture */
+.info-img img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+}
+.info-img img:hover {
+  transform: scale(1.025);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.65);
+}
+
+/* Resume items — accent left border on hover */
+.resume-section .resume-item {
+  transition: border-left-color 0.3s ease, transform 0.3s ease !important;
+}
+.resume-section .resume-item:hover {
+  border-left-color: #019963 !important;
+  transform: translateX(5px);
+}
+
+/* Skill bar gradient + smooth fill */
+.skills-section .single-skill .skill-progress .progress-bar {
+  background: linear-gradient(90deg, #019963, #00d4a4) !important;
+  transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Portfolio — image zoom */
+.portfolio-section .portfolio-grid .portfolio-wrapper {
+  overflow: hidden;
+}
+.portfolio-section .portfolio-grid .portfolio-wrapper > .img-fluid {
+  transition: transform 0.45s ease !important;
+}
+.portfolio-section .portfolio-grid .portfolio-wrapper:hover > .img-fluid {
+  transform: scale(1.09);
+}
+
+/* Portfolio — filter pills */
+.portfolio-section .filter-control > li {
+  padding: 5px 16px !important;
+  border-radius: 20px !important;
+  border: 1px solid transparent !important;
+  transition: all 0.25s ease !important;
+}
+.portfolio-section .filter-control > li:hover,
+.portfolio-section .filter-control > li.tab-active {
+  border-color: rgba(1, 153, 99, 0.45) !important;
+  background: rgba(1, 153, 99, 0.08) !important;
+}
+
+/* Blog cards */
+.blog-section .single-post {
+  border-radius: 8px !important;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.blog-section .single-post:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.55) !important;
+}
+.blog-section .single-post .card-img-top {
+  transition: transform 0.4s ease;
+}
+.blog-section .single-post:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Contact — form fields */
+.contact-section .contact-form .form-group .form-control {
+  transition: border-bottom-color 0.3s ease !important;
+}
+.contact-section .contact-form .form-group .form-control:focus {
+  border-bottom-color: #019963 !important;
+}
+
+/* Contact info list */
+.contact-section .contact-info .list-info > li {
+  transition: transform 0.3s ease;
+}
+.contact-section .contact-info .list-info > li:hover {
+  transform: translateX(6px);
+}
+
+/* Footer inside lightbox */
+.lightbox-wrapper footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 40px;
+}
+
+/* ================================================================
+   PRELOADER — smoother bounce
+   ================================================================ */
+@keyframes dotBounce {
+  0%, 80%, 100% { transform: scale(0.45); opacity: 0.35; }
+  40%           { transform: scale(1);    opacity: 1;    }
+}
+.preloader .preloader-block .preloader-icon .loading-dot {
+  animation: dotBounce 1.4s ease-in-out infinite both !important;
+}
+.preloader .preloader-block .preloader-icon .loading-dot.loading-dot-1 { animation-delay: -0.32s !important; }
+.preloader .preloader-block .preloader-icon .loading-dot.loading-dot-2 { animation-delay: -0.16s !important; }
+.preloader .preloader-block .preloader-icon .loading-dot.loading-dot-3 { animation-delay:  0s    !important; }
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+
+/* Services header */
+@media (max-width: 991px) {
+  .services-header h1 { font-size: 2rem; }
+}
+@media (max-width: 768px) {
+  .services-header h1 { font-size: 1.6rem; }
+  .section-badge      { font-size: 1.25rem; }
+  .services-header p  { font-size: 0.9rem; }
+  footer .footer-container > p { font-size: 15px !important; }
+}
+@media (max-width: 480px) {
+  .services-header h1 { font-size: 1.2rem; line-height: 1.4; }
+  .section-badge      { font-size: 1rem; }
+  .cta-buttons        { flex-direction: column; align-items: center; gap: 12px; }
+  #cta-primary,
+  #cta-secondary      { width: 100%; max-width: 280px; text-align: center; }
+  footer .footer-container > p { font-size: 13px !important; }
+  .footer-logo img    { width: 100px !important; }
+}
+
+/* ================================================================
+   HOME SECTION – responsive background image fix
+   ================================================================ */
+
+/* Base: always cover, always scroll (iOS Safari ignores fixed bg on 100vh sections) */
+.home-area {
+  background-size: cover !important;
+  background-attachment: scroll !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  min-height: 100svh;           /* small viewport height – avoids iOS bar crop */
+  min-height: 100vh;            /* fallback */
+}
+
+/* Tablet (768 – 991px): keep subject centred */
+@media (max-width: 991px) {
+  .home-area {
+    background-position: center top !important;
+  }
+}
+
+/* Mobile portrait (≤ 575px): show top of image so face stays visible */
+@media (max-width: 575px) {
+  .home-area {
+    background-position: center top !important;
+    /* Lighten overlay slightly so face isn't lost in darkness */
+    background-color: #0a0a0a !important;
+  }
+  .home-area:before {
+    background-color: rgba(0, 0, 0, 0.35) !important;
+  }
+}
+
+/* Home heading sizes + content padding */
+@media (max-width: 767px) {
+  .home-area .home-name { font-size: 2.4rem !important; }
+  /* Push text up slightly so it clears the bottom fixed block area */
+  .home-area .home-content { padding-bottom: 80px; }
+}
+@media (max-width: 480px) {
+  .home-area .home-name      { font-size: 1.85rem !important; }
+  .home-area .home-headline  { font-size: 1rem    !important; }
+  .home-area .home-content   { padding-bottom: 60px; }
+}
+
+/* Lightbox container */
+@media (max-width: 575px) {
+  .lightbox-wrapper .container         { padding-left: 14px; padding-right: 14px; }
+  .lightbox-wrapper .lightbox-close    { right: 12px !important; top: 16px !important; }
+  .services-grid                        { gap: 12px !important; }
+  .service-card                         { padding: 14px !important; }
+}
+
+/* go-contact buttons on mobile */
+@media (max-width: 480px) {
+  .go-contact-btn { font-size: 0.8rem !important; padding: 8px 12px !important; }
+}
+
+/* Hide language/social blocks on very small screens */
+@media (max-width: 360px) {
+  .fixed-block { display: none !important; }
+}
+
+/* Contact form spacing on small screens */
+@media (max-width: 575px) {
+  .contact-section .contact-form { margin-bottom: 30px; }
+}
+
+/* Navbar brand on small screens */
+@media (max-width: 575px) {
+  .navbar-brand img { max-height: 34px; }
+}

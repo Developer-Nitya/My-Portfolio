@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
   <!-- Required meta tags-->
@@ -30,10 +30,6 @@
   <link id="color-scheme" rel="stylesheet" href="css/colors/main-darkgreen.css">
   <!-- Custom CSS (Add your custom CSS styles to this file)-->
   <link rel="stylesheet" href="css/custom.css">
-  <!-- removeIf(customizerDist)-->
-  <link rel="stylesheet" href="../customizer/main.css">
-
-  <!-- endremoveIf(customizerDist)-->
 </head>
 
 <body class="theme-dark">
@@ -66,7 +62,7 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center">
         <div class="col-12 col-lg-8 home-content text-center">
-          <h1 class="home-name">Nityananda <span></span></h1>
+          <h1 class="home-name">Nityananda</h1>
           <h4 class="cd-headline clip home-headline">I’m a <span class="cd-words-wrapper single-headline"><b class="is-visible" style="color: #019963;">Developer</b><b>Designer</b><b style="color: #019963;">Freelancer</b></span></h4>
         </div>
       </div>
@@ -75,15 +71,15 @@
       <!-- Languages list-->
       <div class="fixed-block block-left">
         <ul class="list-unstyled languages-list">
-          <li><a href="#0"><span class="single-language" style="color: #019963;">Beng</span></a></li>
-          <li><a href="#0"><span class="single-language" style="color: #019963;">Eng</span></a></li>
+          <li><a href="#0" class="lang-btn lang-active" data-lang="en">EN</a></li>
+          <li><a href="#0" class="lang-btn" data-lang="bn">বাং</a></li>
         </ul>
       </div>
       <!-- Social media icons-->
       <div class="fixed-block block-right">
         <ul class="list-unstyled social-icons">
           <li><a href="https://www.facebook.com/nityauas" target="_blank"><i class="icon ion-logo-facebook"></i></a></li>
-          <li><a href="https://x.com/freelancenity" target="_blank"><i class="icon ion-logo-twitter"></i></a></li>
+          <li><a href="https://x.com/freelancenitya" target="_blank"><i class="icon ion-logo-twitter"></i></a></li>
           <li><a href="https://www.linkedin.com/in/nityanandamandal/" target="_blank"><i class="icon ion-logo-linkedin"></i></a></li>
           <li><a href="https://www.instagram.com/freelancenitya/" target="_blank"><i class="icon ion-logo-instagram"></i></a></li>
           <li><a href="https://github.com/Developer-Nitya" target="_blank"><i class="icon ion-logo-github"></i></a></li>
@@ -244,7 +240,7 @@
                 <button class="go-contact-btn" style="margin-top: 10px;">Get Ongoing Support</button>
             </div>
             
-            <!-- Service Card 6 -->
+            <!-- Service Card 7 -->
 
             <div class="service-card">
                 <div class="service-grid-item text-center">
@@ -378,7 +374,7 @@
                         </div>
                       </div><i class="icon ion-md-quote review-icon"></i>
                     </div>
-                    <p class="review-content">"Working with Nityananda on our Facebook campaigns has been transformative. Her expertise in digital marketing and targeted strategies consistently boosted our engagement and ROI beyond expectations."</p>
+                    <p class="review-content">"Working with Nityananda on our Facebook campaigns has been transformative. Their expertise in digital marketing and targeted strategies consistently boosted our engagement and ROI beyond expectations."</p>
                   </div>
                 </div>
 
@@ -394,7 +390,7 @@
                         </div>
                       </div><i class="icon ion-md-quote review-icon"></i>
                     </div>
-                    <p class="review-content">"Nityananda’s skills in Excel and spreadsheet management are exceptional. He streamlined our data processes and created insightful reports that made decision-making much faster and easier."</p>
+                    <p class="review-content">"Nityananda’s skills in Excel and spreadsheet management are exceptional. They streamlined our data processes and created insightful reports that made decision-making much faster and easier."</p>
                   </div>
                 </div>
 
@@ -557,7 +553,7 @@
                     </div>
                     
                     <div class="resume-item"><span class="item-arrow"></span>
-                      <h5 class="item-title">Bachelor Degree</h5><span class="item-details">University of Dhaka / 1944 - 1997</span>
+                      <h5 class="item-title">Bachelor Degree</h5><span class="item-details">University of Dhaka / 1994 - 1997</span>
                       <p class="item-description" style="text-align: justify;">"I obtained a three-year undergraduate degree in the subject of Education in the Science discipline and successfully passed with distinction."</p>
                     </div>
                     <div class="resume-item"><span class="item-arrow"></span>
@@ -660,7 +656,7 @@ Completed a research project on Science in secondary education."</p>
       </div>
     </div>
     <!-- Footer Section Start -->
-<footer style="#">
+<footer>
     <div class="footer-container" style="text-align: center;">
         <!-- Logo Section -->
         <div class="footer-logo">
@@ -829,7 +825,7 @@ Completed a research project on Science in secondary education."</p>
       </div>
     </div>
 <!-- Footer Section Start -->
-<footer style="#">
+<footer>
     <div class="footer-container" style="text-align: center;">
         <!-- Logo Section -->
         <div class="footer-logo">
@@ -961,7 +957,7 @@ Completed a research project on Science in secondary education."</p>
       </div>
     </div>
     <!-- Footer Section Start -->
-<footer style="#">
+<footer>
     <div class="footer-container" style="text-align: center;">
         <!-- Logo Section -->
         <div class="footer-logo">
@@ -1084,7 +1080,7 @@ Completed a research project on Science in secondary education."</p>
     </div>
   
   <!-- Footer Section Start -->
-<footer style="#">
+<footer>
     <div class="footer-container" style="text-align: center;">
         <!-- Logo Section -->
         <div class="footer-logo">
@@ -1181,58 +1177,17 @@ Completed a research project on Science in secondary education."</p>
   <script src="js/main.js"></script>
   <!-- Custom JS (Add your custom JS scripts to this file)-->
   <script src="js/custom.js"></script>
-  <!-- removeIf(customizerDist)-->
-  <script src="../customizer/main.js"></script>
-  <!-- endremoveIf(customizerDist)-->
 
-  <!--One button Click to Contact Section--JS Code-->
+  <!-- Service buttons open the Contact section via animatedModal -->
   <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const contactButtons = document.querySelectorAll(".go-contact-btn");
-    const contactModal = document.getElementById("contact");
-    const closeBtn = document.querySelector("#contact .close-btn");
-
-    function openContactModal() {
-        if (!contactModal) return;
-
-        contactModal.style.display = "block";
-        contactModal.style.visibility = "visible";
-        contactModal.style.opacity = "1";
-        contactModal.style.pointerEvents = "auto";
-        contactModal.style.zIndex = "9999";
-
-        document.body.style.overflow = "hidden";
-
-        setTimeout(function () {
-            contactModal.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        }, 100);
-    }
-
-    function closeContactModal() {
-        if (!contactModal) return;
-
-        contactModal.style.opacity = "0";
-        contactModal.style.visibility = "hidden";
-        contactModal.style.pointerEvents = "none";
-        contactModal.style.display = "none";
-
-        document.body.style.overflow = "auto";
-    }
-
-    contactButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            openContactModal();
+    var contactButtons = document.querySelectorAll(".go-contact-btn");
+    contactButtons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            var contactLink = document.querySelector('.navbar .navbar-nav .nav-link[href="#contact"]');
+            if (contactLink) contactLink.click();
         });
     });
-
-    if (closeBtn) {
-        closeBtn.addEventListener("click", function () {
-            closeContactModal();
-        });
-    }
 });
 </script>
 

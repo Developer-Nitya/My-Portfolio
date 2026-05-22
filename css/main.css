@@ -13,7 +13,7 @@
   border: 0;
 }
 
-* body {
+body {
   background-color: #111;
   color: #9f9f9f;
   font-family: Poppins, sans-serif;
@@ -1612,12 +1612,6 @@ hr {
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  font-family: Arial, sans-serif;
-  background-color: #1a1a1a;
-  color: #fff;
-  padding: 20px;
-}
 
 .services-section {
   max-width: 1200px;
@@ -1654,6 +1648,7 @@ body {
 }
 
 .service-card {
+  position: relative;
   background-color: #202020;
   padding: 20px;
   border-radius: 8px;
